@@ -39,6 +39,12 @@ return {
           ".git",
         },
         capabilities = capabilities,
+        settings = {
+          python = {
+            analysis = {
+            }
+          }
+        }
       })
 
       vim.lsp.enable("clangd")
