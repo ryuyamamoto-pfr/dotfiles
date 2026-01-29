@@ -1,7 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    branch = "master",
+    branch = "master",  -- 追加：安定版ブランチを使用
     build = ":TSUpdate",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
