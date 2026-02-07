@@ -27,7 +27,7 @@ vim.api.nvim_set_keymap('n', "<Leader>fi", "<cmd>Telescope lsp_implementations<C
 vim.api.nvim_set_keymap('n', "<Leader>fb", "<cmd>Telescope buffers<CR>", opts)
 vim.api.nvim_set_keymap('n', "<Leader>fh", "<cmd>Telescope help_tags<CR>", opts)
 
-vim.keymap.set('n', 'gr', function()
+vim.keymap.set('n', '<Leader>fs', function()
   require('telescope.builtin').grep_string({
     word_match = '-w',
     additional_args = {
@@ -40,8 +40,11 @@ vim.keymap.set('n', 'gr', function()
   })
 end, { desc = "Grep exact word (no test, no symlink)" })
 
+-- Oil
+vim.api.nvim_set_keymap('n', "<Leader>e", "<cmd>Oil<CR>", opts)
+
 -- NERDTree
-vim.api.nvim_set_keymap('n', "<Leader>e", "<cmd>NvimTreeToggle<CR>", opts)
+-- vim.api.nvim_set_keymap('n', "<Leader>e", "<cmd>NvimTreeToggle<CR>", opts)
 
 -- terminal mode for toggle term
 vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-w>h")

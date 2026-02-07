@@ -4,6 +4,7 @@ return {
   opts = {
     keymap = {
       preset = "enter",
+      ["<C-l>"] = { "show" },
     },
     appearance = {
       nerd_font_variant = "mono",
