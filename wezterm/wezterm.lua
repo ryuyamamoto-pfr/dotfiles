@@ -7,10 +7,11 @@ config.automatically_reload_config = true
 -- config.font = wezterm.font("PlemolJP Console NF")
 -- config.font = wezterm.font("JetBrains Mono")
 config.font = wezterm.font {
-  family = "JetBrains Mono Nerd Font",
+  -- family = "JetBrains Mono Nerd Font",
+  family = "UDEV Gothic NF",
   harfbuzz_features = { "liga=0", "clig=0", "calt=0" },
 }
-config.font_size = 11.0
+config.font_size = 12.0
 
 -- config.color_scheme = "Solarized Dark Higher Contrast"
 -- config.color_scheme = "Solarized Dark (Gogh)"
