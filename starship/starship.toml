@@ -1,0 +1,74 @@
+add_newline = true
+command_timeout = 1000
+palette = "catppuccin_mocha"
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$golang\
+$python\
+$cmd_duration\
+$time\
+$line_break\
+$character"""
+
+[palettes.catppuccin_mocha]
+base = "#1e1e2e"
+blue = "#89b4fa"
+surface = "#45475a"
+overlay = "#6c7086"
+text = "#cdd6f4"
+subtext = "#a6adc8"
+red = "#f38ba8"
+
+[directory]
+format = "[ $path ](fg:base bg:blue bold)[$read_only]($read_only_style)[](fg:blue bg:surface)"
+truncation_length = 3
+truncate_to_repo = true
+truncation_symbol = "…/"
+read_only = " "
+read_only_style = "fg:base bg:blue"
+
+[git_branch]
+symbol = ""
+format = "[  $branch ](fg:text bg:surface)"
+
+[git_status]
+format = "([ $all_status$ahead_behind ](fg:subtext bg:surface))"
+
+[nodejs]
+symbol = ""
+format = "[ $symbol $version ](fg:subtext bg:surface)"
+[rust]
+symbol = ""
+format = "[ $symbol $version ](fg:subtext bg:surface)"
+[golang]
+symbol = ""
+format = "[ $symbol $version ](fg:subtext bg:surface)"
+[python]
+symbol = ""
+format = "[ $symbol $version ](fg:subtext bg:surface)"
+
+[cmd_duration]
+min_time = 2000
+format = "[  $duration ](fg:subtext bg:surface)"
+
+[time]
+disabled = false
+time_format = "%R"
+format = "[  $time ](fg:text bg:surface)[](fg:surface)"
+
+[character]
+success_symbol = "[❯](bold blue)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold blue)"
+
+[aws]
+disabled = true
+[gcloud]
+disabled = true
+[package]
+disabled = true
