@@ -1,5 +1,7 @@
 # config.fish
 
+fish_add_path --global ~/.local/bin
+
 # ROS 2 argument completion
 if command -v register-python-argcomplete > /dev/null
     register-python-argcomplete --shell fish ros2 | source
