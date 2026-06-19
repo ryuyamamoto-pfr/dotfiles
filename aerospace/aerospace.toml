@@ -144,7 +144,6 @@ on-mode-changed = []
     alt-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
     alt-b = 'workspace B'
     alt-c = 'workspace C'
-    alt-d = 'workspace D'
     alt-e = 'workspace E'
     alt-f = 'fullscreen'
     alt-g = 'workspace G'
