@@ -128,9 +128,6 @@ on-mode-changed = []
     alt-minus = 'resize smart -50'
     alt-equal = 'resize smart +50'
 
-    # i3-style extras
-    alt-enter = 'exec-and-forget open -n -a WezTerm'
-
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
     alt-1 = 'workspace 1'
     alt-2 = 'workspace 2'
@@ -144,6 +141,7 @@ on-mode-changed = []
     alt-f = 'fullscreen'
     alt-m = 'mode move'
     alt-q = 'close'
+    alt-enter = 'exec-and-forget open -n -a WezTerm'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 
