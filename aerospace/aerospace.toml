@@ -7,7 +7,15 @@ config-version = 2
 
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+  'exec-and-forget sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=1',
+]
+
+# Notify sketchybar whenever the focused workspace changes so the bar can
+# highlight the active workspace and refresh window icons.
+exec-on-workspace-change = ['/bin/bash', '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
+]
 
 # Start AeroSpace at login
 start-at-login = false
@@ -72,7 +80,14 @@ on-mode-changed = []
     inner.vertical =   0
     outer.left =       0
     outer.bottom =     0
-    outer.top =        0
+    # Reserve room for the sketchybar at the top. The built-in display has a
+    # notch whose ~38pt safe area already covers the bar, so it needs 0; other
+    # (non-notched) monitors need the full bar height.
+    outer.top = [
+      { monitor."built-in" = 0 },
+      { monitor."BenQ PD3205U" = 40 },
+      40 # default for any other (non-notched) monitor; match the bar height
+    ]
     outer.right =      0
 
 # 'main' binding mode declaration
